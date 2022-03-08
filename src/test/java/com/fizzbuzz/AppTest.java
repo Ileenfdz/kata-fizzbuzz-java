@@ -10,42 +10,27 @@ import org.junit.Test;
 public class AppTest 
 {
     @Test
-    public void shouldAnswerWithFizzBuzz()
-    {
-        String expected = "FizzBuzz!";
-        String actual = FizzBuzz.main(534);
-        assertEquals( expected, actual );
+    public void Should_Return_Buzz_If_It_Contains_The_Number_5(){
+        assertEquals( "Buzz!", FizzBuzz.main(52) );
     }
 
     @Test
-    public void shouldAnswerWithBuzzIfContainsTheNumber()
-    {
-        String expected = "Buzz!";
-        String actual = FizzBuzz.main(52);
-        assertEquals( expected, actual );
+    public void Should_Return_Fizz_If_It_Contains_The_Number_3(){
+        assertEquals( "Fizz!", FizzBuzz.main(23) );
     }
 
     @Test
-    public void shouldAnswerWithFizzIfContainsTheNumber()
-    {
-        String expected = "Fizz!";
-        String actual = FizzBuzz.main(23);
-        assertEquals( expected, actual );
+    public void Should_Return_Buzz_If_It_Is_Divisible_By_The_Number_5(){
+        assertEquals( "Buzz!", FizzBuzz.main(25) );
     }
 
     @Test
-    public void shouldAnswerWithBuzzIfDivisibleByTheNumber()
-    {
-        String expected = "Buzz!";
-        String actual = FizzBuzz.main(25);
-        assertEquals( expected, actual );
+    public void Should_Return_Buzz_If_It_Is_Divisible_By_The_Number_3(){
+        assertEquals( "Fizz!", FizzBuzz.main(9) );
     }
 
     @Test
-    public void shouldAnswerWithFizzIfDivisibleByTheNumber()
-    {
-        String expected = "Fizz!";
-        String actual = FizzBuzz.main(9);
-        assertEquals( expected, actual );
+    public void Should_Return_The_Number_Given(){
+        assertEquals( "11!", FizzBuzz.main(11) );
     }
 }
